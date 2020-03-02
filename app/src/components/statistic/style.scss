@@ -1,0 +1,524 @@
+#calc_main {
+	font-size: 14px;
+	max-width: 1400px;
+	max-width: 1000px;
+	margin: 80px auto 0;
+
+	strong {
+		font-family: 'MuseoSansCyrl-700';
+	}
+
+	&.not_deals {
+		max-width: 1000px;
+	}
+
+	table {
+		max-width: 1000px;
+		margin: 0 auto;
+		width: 100%;
+		box-shadow: 0px 0px 10px rgba(0,0,0,.05);
+
+		tr {
+			&.hide {
+				display: none;
+			}
+
+			.fone {
+				background:rgba(62,224,5,.1)!important;
+
+				input[type="text"]:disabled {
+					border-color: transparent;
+					color: #000;
+					background:transparent!important;
+				}
+			}
+
+			th {
+				font-family: 'MuseoSansCyrl-700';
+				background: #fbfbfb;
+			}
+
+			th, td {
+				padding: 5px 10px;
+				padding: 10px;
+				text-align: center;
+				border: 1px solid #cccccc;
+				height: 36px;
+				vertical-align: middle;
+				position: relative;
+			}
+
+			label {
+				input[type="checkbox"] {
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0 10px 0 0;
+				}
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: 1px;
+				}
+			}
+		}
+
+		input[type="submit"] {
+			border: 1px solid #cccccc;
+			background: #f5f5f5;
+			border-radius: 3px;
+			height: 35px;
+			box-sizing: border-box;
+			width: 250px;
+			width: 200px;
+			cursor: pointer;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: 5px 0;
+			font-family: 'MuseoSansCyrl-700';
+		}
+	}
+
+	input[type="text"], textarea, select {
+		border: 1px solid #cccccc;
+		text-align: center;
+		width: 100%;
+		height: 35px;
+		border-radius: 5px;
+		font-size: 16px;
+		display: inline-block;
+		font-family: 'MuseoSansCyrl-300';
+
+		&:disabled {
+			opacity:0.5;
+			border-color: transparent;
+			color: #000;
+			background: #ffffff;
+		}
+	}
+
+	textarea {
+		height: 100px;
+		margin-top: 10px;
+	}
+
+	select {
+		width: 90%;
+		padding: 0 3px!important;
+	}
+
+	// TABLE.DEALS
+
+	table.main {
+	/* 	position: fixed;
+	    top: 0;
+	    background: #ffffff;
+	    left: 50%;
+	    margin-left: -600px; */
+		margin-bottom: 20px;
+	}
+
+	.rur{
+		display: inline-block;
+		width: 18px;
+		text-align: center;
+	}
+
+	td {
+		width: calc(100%/6);
+	}
+
+	td.fix {
+		vertical-align:middle;
+		background:rgba(62,224,5,.1)!important;
+	}
+
+	.title {
+		font-size: 18px;
+		padding: 20px 0;
+		text-align: center;
+		border: 1px solid #cccccc;
+		margin-top: -1px;
+		margin-bottom: -1px;
+		background: #f8f8f8;
+		max-width: 1000px;
+		box-sizing: border-box;
+	}
+}
+
+
+table.deals {
+	/* input[type="text"], select {
+		padding: 0 3px;
+		font-size: 14px;
+	} */
+
+	&.scrolled {
+		tr:first-child {
+			/* position: fixed;
+		    width: 1400px;
+		    background: #ffffff;
+		    top: 0;
+		    box-shadow: 0px 0px 10px rgba(0,0,0,.1); */
+		}
+	}
+
+	tr {
+		&:hover:not(.not_active) {
+			td {
+				background: #f5f5f5!important;
+			}
+		}
+
+		&.open:hover {
+			td:not(.fone) {
+				background: #ffffff!important;
+			}
+			td.fone {
+				background: rgba(62,224,5,.1)!important;
+			}
+		}
+
+		&.separate {
+			font-family: 'MuseoSansCyrl-700';
+		  background: #fbfbfb;
+		}
+
+		&.total {
+			td {
+				padding: 25px 10px;
+			}
+		}
+	}
+
+	th, td {
+		width: calc(1400px/9);
+		width: calc(1000px/9);
+		padding-left: 0!important;
+		padding-right: 0!important;
+	}
+
+	th {
+		a {
+			display: block;
+	    padding: 5px 0;
+	    text-decoration: none;
+	    color: #333333;
+		}
+	}
+
+	td {
+		&.padding {
+			padding-left: 30px!important;
+			padding-right: 30px!important;
+			overflow: hidden;
+		}
+
+		&.plus {
+			color: rgba(62,224,5,1)!important;
+		}
+
+		&.return {
+			color: #cccccc;
+		}
+
+		&.minus {
+			color: red;
+		}
+
+		strong {
+			font-size: 16px;
+
+			&.profit {
+				color: rgba(62,224,5,1)!important;
+			}
+
+			&.drow {
+				color: red!important;
+			}
+		}
+
+		small {
+			color: #cccccc;
+
+			&.profit {
+				color: rgba(62,224,5,1)!important;
+			}
+
+			&.drow {
+				color: red!important;
+			}
+		}
+
+		label {
+			cursor: pointer;
+			width: 85px;
+			display: inline-block;
+			text-align: left;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+
+			/* No support for these yet, use at own risk */
+			-o-user-select: none;
+			user-select: none;
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				color: red;
+			}
+
+			&.returned, &.results_deal {
+				white-space: nowrap;
+
+				&.check {
+					span {
+						color: #666666;
+					}
+				}
+			}
+
+			&.return, &.returned {
+				span {
+					color: #cccccc;
+				}
+			}
+
+			&.plus {
+				span {
+					color: rgba(62,224,5,1)!important;
+				}
+			}
+
+		}
+
+		span.minus {
+			cursor: pointer;
+			width: 60px;
+			display: inline-block;
+			text-align: left;
+			padding-left: 0;
+			color: red;
+		}
+
+		span.plus {
+			cursor: pointer;
+			width: 60px;
+			display: inline-block;
+			text-align: left;
+			padding-left: 0;
+			color: rgba(62,224,5,1)!important;
+		}
+
+		span.return {
+			cursor: pointer;
+			width: 60px;
+			display: inline-block;
+			text-align: left;
+			padding-left: 0;
+			color: #cccccc;
+
+			i {
+				font-size: 14px;
+			}
+		}
+
+	}
+
+	&.stat {
+		margin-bottom: 30px;
+		margin-top: -21px;
+
+		th, td {
+			width: calc(100%/7);
+			padding-left: 0!important;
+			padding-right: 0!important;
+		}
+
+		th {
+			padding: 0!important;
+
+			a {
+				display: block;
+				padding: 10px 0;
+				text-decoration: none;
+				color: #333333;
+
+				i.fa {
+					margin-left: 5px;
+				}
+
+				&.current {
+			    color: red;
+				}
+			}
+		}
+	}
+
+	input.price {
+		width:calc(100% - 18px);
+	}
+
+	input[type="text"] {
+		width: 60px!important;
+	}
+
+	input[name="s[percent]"] {
+		width: 50px!important;
+	}
+
+	.comment {
+		color: #aaaaaa;
+    display: block;
+    font-size: 14px;
+	}
+}
+
+
+.ui-datepicker {
+  width: 240px!important;
+  z-index: 10001!important;
+}
+
+
+
+/* НЕ СЕЯННЫЕ */
+#calc_main table.results tr td {
+	border: none;
+}
+#calc_main table.results {
+	width: 34%;
+	margin-top: 20px!important;
+	margin-bottom: 70px!important;
+	box-shadow: none!important;
+}
+#calc_main table.results input[type="submit"]{
+	width: 250px;
+	width: 200px;
+}
+#calc_main table.results input[type="submit"]:hover {
+	background: #fc8507;
+	color: #ffffff;
+	border-color: #fc8507;
+}
+
+#calc_main .title.d.margin {
+	margin-bottom: 36px;
+}
+#calc_main table th small {
+	font-weight: 300;
+	color: #cccccc;
+}
+#calc_main table td .edit {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+    color: rgba(62,224,5,1)!important;
+    padding: 10px 3px;
+}
+#calc_main table td .del {
+	display: inline-block;
+    vertical-align: middle;
+    color: red;
+    cursor: pointer;
+    padding: 10px 3px;
+    margin: 0px 0px;
+	position: relative;
+    top: -1px;
+}
+#calc_main table td .save {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+    color: rgba(62,224,5,1)!important;
+    padding: 10px 3px;
+}
+#calc_main table td .cancel {
+	display: inline-block;
+    vertical-align: middle;
+    color: gray;
+    cursor: pointer;
+    padding: 10px 3px;
+    margin: 0px 0px;
+	position: relative;
+}
+#calc_main table td .add {
+	display: block;
+    cursor: pointer;
+    padding: 10px 0px;
+    margin: -5px -10px;
+    background: #fafafa;
+}
+#calc_main table.deals td:nth-child(6), #calc_main table.deals th:nth-child(6), #calc_main table.deals td:nth-child(7), #calc_main table.deals th:nth-child(7), #calc_main table.deals td:nth-child(8), #calc_main table.deals th:nth-child(8) {
+	min-width: 110px!important;
+}
+
+#calc_main table.deals td:nth-child(11), #calc_main table.deals th:nth-child(11), #calc_main table.deals td:nth-child(11), #calc_main table.deals th:nth-child(11) {
+	width: 60px!important;
+}
+
+#calc_main table.deals td:nth-child(1), #calc_main table.deals th:nth-child(1), #calc_main table.deals td:nth-child(1), #calc_main table.deals th:nth-child(1) {
+	width: 80px!important;
+}
+
+#calc_main table.deals td:nth-child(4), #calc_main table.deals th:nth-child(4), #calc_main table.deals td:nth-child(4), #calc_main table.deals th:nth-child(4) {
+	width: 100px!important;
+}
+
+#calc_main table.deals td:nth-child(5), #calc_main table.deals th:nth-child(5), #calc_main table.deals td:nth-child(5), #calc_main table.deals th:nth-child(5) {
+	width: 80px!important;
+}
+
+
+#calc_main table.deals tr td .not_activ {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#calc_main table.deals tr.open {
+    box-shadow: 0px 0px 20px rgba(0,0,0,.1)
+}
+#calc_main table.deals.edited tr:not(.open) td:after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	content: "";
+}
+#calc_main table.deals.edited tr:not(.open){
+	opacity: 0.2;
+}
+#calc_main table.deals.edited tr:not(.open) th,#calc_main table.deals.edited tr:not(.open) td {
+	border-color: #eeeeee!important;
+}
+#calc_main table.deals.edited tr:hover:not(.open) td:not(.fone) {
+	background: #ffffff!important;
+}
+#calc_main table.deals.edited tr.open:hover td.fone {
+	background: rgba(62,224,5,.1)!important;
+}
+
+#calc_main table.deals tr.hide {
+	display: none;
+}
+
+#calc_main table#use_stages th,#calc_main table#use_stages td {
+	width: auto;
+}
+
+
+@media screen and (max-width:1400px){
+	#calc_main table.deals.scrolled tr:first-child {
+		position: relative;
+		width: auto;
+	}
+}

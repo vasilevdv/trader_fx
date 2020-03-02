@@ -1,0 +1,175 @@
+{
+	"deals": {
+		"count": 39,
+		"summa_deals": 49200.00,
+		"turnover": 37313.75,
+		"profit": 7667.00,
+		"results": {
+			"plus": 17,
+			"minus": 20,
+			"returned": 2,
+			"sold": 0,
+		},
+		"deposit": 7668.00,
+		"deals": [
+			{
+				"id": 1,
+				"date": "2019-07-08",
+				"time": "14:28:15",
+				"type": 1, // 0 - режим онлайн, 1 - выгрузка сделок
+				"broker": 2,
+				"pair": "USDCAD",
+				"percent": 76,
+				"summa": 300,
+				"currency": 1,
+				"currency_symbol": "₽",
+				"income": 528.00,
+				"profit": -300.00,
+				"result": 0, // -1 - возврат, 0 - минус, 1 - плюс, 2 - продажа
+				"images": [
+					"/uploads/0c226ec40f5b469b0013.jpg",
+					"/uploads/10ecd961d93a76a00591.jpg",
+				],
+				"reason": "",
+				"comment": "",
+			}
+		],
+		"last_deal": {
+			"id": 39,
+			"broker": 2,
+			"pair": "USDCAD",
+			"percent": 76,
+			"summa": 300,
+			"currency": 1,
+			"currency_symbol": "₽",
+			"income": 528.00,
+		}
+	},
+
+	"settings": {
+
+		"data_info": {
+			"user_id": 1,
+			"deposit": 5000,
+			"min_summa": 500,
+			"percent": 82,
+			"draw": 20,
+			"currency": 1,
+			"currency_symbol": "₽",
+		},
+
+		"stages": [
+			{
+				"id": 1,
+				"percent_deposit": 10.00,
+				"percent": 82,
+				"factor": 1,
+				"summa": 500,
+				"summa_deals": 500,
+				"percent_summa_deals": -10.00,
+				"percent_profit": 8.20,
+				"profit": 410,
+			},{
+				"id": 2,
+				"percent_deposit": 15.00,
+				"percent": 82,
+				"factor": 1.5,
+				"summa": 750,
+				"summa_deals": 1250,
+				"percent_summa_deals": -25.00,
+				"percent_profit": 2.30,
+				"profit": 115,
+			},{
+				"id": 3,
+				"percent_deposit": 33.00,
+				"percent": 82,
+				"factor": 2.2,
+				"summa": 1650,
+				"summa_deals": 2900,
+				"percent_summa_deals": -58.00,
+				"percent_profit": 2.06,
+				"profit": 103,
+			},
+		],
+
+		"pairs": [
+			{
+				"id": 1,
+				"name": "AUDCAD",
+				"active": true,
+				"default": false,
+			},{
+				"id": 2,
+				"name": "AUDCHF",
+				"active": false,
+				"default": false,
+			},{
+				"id": 3,
+				"name": "AUDJPY",
+				"active": false,
+				"default": false,
+			},{
+				"id": 34,
+				"name": "AUDNZD",
+				"active": false,
+				"default": false,
+			},
+		],
+
+		"brokers": [
+			{
+				"id": 1,
+				"name": "24option",
+				"active": false,
+				"default": false,
+			},
+		],
+
+		"deposits": [
+			{
+				"id": 1,
+				"broker": 2,
+				"summa": 1900,
+				"summa_bonus": 0,
+				"date": "2019-07-30",
+				"time": "14:42:07",
+				"credit": 0,
+			},{
+				"id": 2,
+				"broker": 2,
+				"summa": 1750,
+				"summa_bonus": 0,
+				"date": "2019-07-30",
+				"time": "17:17:08",
+				"credit": 0,
+			},
+		],
+
+		"deposit": {
+			"summa": 0.19,
+			"date": "2019-08-14",
+		}
+
+	},
+
+	"unloading": {
+		"brokers": [
+			{
+				"id": 2,
+				"name": "Binomo",
+			},{
+				"id": 3,
+				"name": "Finmax",
+			},{
+				"id": 9,
+				"name": "Intrade.Bar",
+			},{
+				"id": 5,
+				"name": "Olymp Trade",
+			},{
+				"id": 6,
+				"name": "Pocket Option",
+			},
+		]
+	}
+}
